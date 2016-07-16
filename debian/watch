@@ -1,0 +1,3 @@
+version=3
+
+https://github.com/EricssonResearch/openwebrtc-gst-plugins/releases .*/v(.*)\.tar\.gz
