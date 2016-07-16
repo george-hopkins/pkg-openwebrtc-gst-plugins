@@ -2,22 +2,23 @@ Source: openwebrtc-gst-plugins
 Priority: optional
 Maintainer: George Hopkins <george-hopkins@null.net>
 Build-Depends:
-    debhelper (>= 9),
-    dh-autoreconf
-Standards-Version: 3.9.4
+ debhelper (>= 9),
+ dh-autoreconf,
+ libgstreamer-plugins-base1.0-dev,
+ libusrsctp-dev
+Standards-Version: 3.9.7
 Section: libs
-Homepage: <http://www.openwebrtc.org/>
+Homepage: <http://www.openwebrtc.org>
 Vcs-Git: https://github.com/george-hopkins/pkg-openwebrtc-gst-plugins.git
 Vcs-Browser: https://github.com/george-hopkins/pkg-openwebrtc-gst-plugins
 
-Package: libopenwebrtc-gst-plugins
-Section: libs
+Package: libgstsctp
 Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: OpenWebRTC specific GStreamer plugins
+Description: SCTP plugin for GStreamer
 
-Package: libopenwebrtc-gst-plugins-dev
+Package: libgstsctp-dev
 Section: libdevel
 Architecture: any
-Depends:
-Description: OpenWebRTC specific GStreamer plugins (development files)
+Depends: libgstsctp (= ${binary:Version})
+Description: SCTP plugin for GStreamer (development files)
